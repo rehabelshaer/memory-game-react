@@ -1,0 +1,70 @@
+
+.memory-game {
+  display: flex;
+  margin: 20px auto;
+  width: 500px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  perspective: 1000px;
+
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 150px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 3px 5px;
+  }
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+  .x {
+    transform: rotateY(180deg);
+
+  }
+   .front {
+    background-color: rgb(56, 182, 204);
+    line-height: 150px;
+    border-radius: 4px;
+
+  }
+   .front:before {
+    content: "?";
+    color: white;
+    font-size: 110px;
+    font-weight: bold;
+  }
+   
+   .front, .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+
+  }
+  
+  .back { 
+    transform: rotateY(180deg);
+  
+  }
+  .back .image {
+   width: 150px;
+   height: 150px;
+  }
+.Toggle{
+  color: chartreuse;
+}
+.notToggle{
+  color:red;
+}
+
